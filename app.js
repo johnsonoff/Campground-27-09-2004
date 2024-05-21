@@ -131,7 +131,7 @@ app.use((req, res, next) => {
 })
   
 
-app.use("/campgrounds",campgroundRouter)
+app.use("/",campgroundRouter)
 app.use("/campgrounds/:id/reviews", reviewRouter)
 app.use("/",passportRouter)
 

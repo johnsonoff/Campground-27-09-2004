@@ -8,10 +8,10 @@ const { storage } = require("../cloudinary/index.js")
 const upload = multer({ storage})
 
 
-router.route("/home")
+router.route("/")
     .get(campgrounds.home)
 
-router.route("/")
+router.route("/campgrounds")
     .get(campgrounds.index )
     .post(isLoggedIn,upload.array("image",10),validateschema, wrap(campgrounds.createCampground))
  
