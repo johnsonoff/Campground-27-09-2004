@@ -15,7 +15,7 @@ router.route("/campgrounds")
     .get(campgrounds.index )
     .post(isLoggedIn,upload.array("image",10),validateschema, wrap(campgrounds.createCampground))
  
-router.get("/new", isLoggedIn, campgrounds.renderNewForm)
+router.get("/campgrounds/new", isLoggedIn, campgrounds.renderNewForm)
 
 
 router.route("/:id")
