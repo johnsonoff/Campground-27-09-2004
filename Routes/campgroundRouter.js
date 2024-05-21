@@ -18,7 +18,7 @@ router.route("/campgrounds")
 router.get("/campgrounds/new", isLoggedIn, campgrounds.renderNewForm)
 
 
-router.route("/:id")
+router.route("/campgrounds/:id")
   .get(wrap(campgrounds.showCampground))
   .put(isLoggedIn,iscampAuth,upload.array("image") ,validateschema, wrap(campgrounds.updateCampground))
   .delete(isLoggedIn,iscampAuth,wrap(campgrounds.deleteCampground))
